@@ -1,23 +1,36 @@
 <!doctype html>
-
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Trippin'</title>
-  <link rel="stylesheet" href="../lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles/main.css">  
-</head>
-
-<nav>
+  <head>
+    <meta charset="utf-8">
+    <title>Trippin'</title>
+    <link rel="stylesheet" href="../lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <nav>
   </nav>
-
-<body>
-
-  
-
-  <script data-main="javascripts/main" 
-          src="../lib/bower_components/requirejs/require.js"></script>
-
-
-</body>
+  <body>
+    <div id="list-of-trips"></div>
+    
+    <div id="mainId" class="col-xs-10 main">
+      <div class="addInstructions btm-marg">Add your locations here!
+      </div>
+      <form>
+        <label>location: <input id="location-name" type="text" name="newSong" class="btm-marg inputStyle" autofocus placeholder="Location" size="40"></label>
+        <br>
+        <label>location type: <input id="location-type" type="text" name="newArtist" class="btm-marg inputStyle" placeholder="Location type goes here" size="40"></label>
+        <br>
+        <label>Review <input id="wish-list" type="text" name="newAlbum" class="btm-marg inputStyle" placeholder="Enter review here" size="40"></label>
+        <br>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default">Visited</button>
+          <button type="button" class="btn btn-default">Wish List</button>
+        </div>
+        <br>
+        <input id="submit" class="btnStyle" type="submit" value="Submit">
+      </form>
+    </div>
+    
+    <script data-main="javascripts/main"
+    src="../lib/bower_components/requirejs/require.js"></script>
+  </body>
 </html>
