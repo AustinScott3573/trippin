@@ -1,7 +1,12 @@
 define(function(require){
+  // Dependencies
   var $ = require("jquery");
+
+  // Module level variables
   var visited = false;
 
+  // Event handlers for determining which list 
+  // the item goes on
   $("#visited").click(function() {
     visited = true;
   });
@@ -10,11 +15,12 @@ define(function(require){
     visited = false;
   });
 
-
+  // POST the data to Firebase when Add Location
+  // button clicked
   $("#add-location").click(function() {
     var newLocation = {
       location: $("#location-name").val(),
-      location_type: $("#location-type").val() || "city",
+      location_type: $("#location-type").val(),
       visited: visited
     };
 

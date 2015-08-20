@@ -2,35 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Trippin'</title>
-    <link rel="stylesheet" href="../lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <title>Trippin</title>
+    <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
   </head>
-  <nav>
-  </nav>
   <body>
     <div id="list-of-trips"></div>
-    
-    <div id="mainId" class="col-xs-10 main">
-      <div class="addInstructions btm-marg">Add your locations here!
-      </div>
-      <form>
-        <label>location: <input id="location-name" type="text" name="newSong" class="btm-marg inputStyle" autofocus placeholder="Location" size="40"></label>
-        <br>
-        <label>location type: <input id="location-type" type="text" name="newArtist" class="btm-marg inputStyle" placeholder="Location type goes here" size="40"></label>
-        <br>
-        <label>Review <input id="wish-list" type="text" name="newAlbum" class="btm-marg inputStyle" placeholder="Enter review here" size="40"></label>
-        <br>
-        <div class="btn-group" role="group" aria-label="...">
-          <button type="button" class="btn btn-default">Visited</button>
-          <button type="button" class="btn btn-default">Wish List</button>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 padded--large">
+          
         </div>
-        <br>
-        <input id="submit" class="btnStyle" type="submit" value="Submit">
-      </form>
+        <div class="col-sm-6 padded--large">
+          <form>
+            <div class="form-group">
+              <label for="location-name">Location name</label>
+              <input type="text" class="form-control" id="location-name" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="location-type">Location Type</label>
+            <select class="form-control" id="location-type" placeholder="Pink Floyd"></select>
+          </div>
+          <div class="form-group">
+            <label for="review">Review</label>
+            <textarea placeholder="Type your review here!" class="form-control" id="review" rows="3"></textarea>
+          </div>
+          <div class="btn-group" role="group" aria-label="...">
+            <button id="visited" type="button" class="btn btn-default">Visited</button>
+            <button id="wish-list" type="button" class="btn btn-default">Wish List</button>
+          </div>
+        </form>
+        <button id="add-location" class="btn btn-raised btn-material-red-400">Add Location &gt;</button>
+      </div>
+      <div class="col-sm-3 padded--large">
+        
+      </div>
     </div>
-    
-    <script data-main="javascripts/main"
-    src="../lib/bower_components/requirejs/require.js"></script>
-  </body>
+  </div>
+  <div class="review-container">
+    <textarea class="review-entry"></textarea>
+    <button id="save-review">Save Review</button>
+  </div>
+  
+  <script data-main="javascripts/main" src="lib/bower_components/requirejs/require.js"></script>
+</body>
 </html>
